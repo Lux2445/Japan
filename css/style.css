@@ -1,0 +1,339 @@
+/* lato-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/lato-v24-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+/* header style start */
+.wrapper {
+    max-width: 1062px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Lato;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #102746;
+}
+
+.header {
+    position:fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    padding: 20px;    
+    transition: 700ms;  
+}
+                      
+.header__active{
+  background:  rgba(148, 146, 255, 0.999);
+  z-index: 100;
+}
+
+.header__burger{
+  width: 40px;
+  height: 28px;
+  position: relative;
+  display: none;
+}
+
+.header__line{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  left: 0;
+}
+
+.header__line_first{
+  top: 0;
+}
+
+.header__line_second{
+  top: 50%;
+}
+
+.header__line_third{
+  bottom: 0;
+}
+
+
+.header__wrapper {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__item {
+  margin-right: 82px;
+}
+
+.header__item:last-child {
+  margin: 0px;
+}
+
+.header__item-link {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 18px;
+}
+
+.header__item-link:hover, .header__item-link:active, .header__item-link:focus {
+  opacity: 0.75;
+  outline:none;
+}
+
+/*header style end */
+
+/*main style start */
+.intro {
+  min-height: 160vh;
+  background: url(../img/bg_intro.jpg) no-repeat center;
+  background-size: cover;
+  padding-top:263px;
+}
+
+.intro__title {
+  max-width:619px;
+  height:121px;
+  color:#FFF;
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 22px;
+  line-height: normal;
+}
+
+.intro__subtitle {
+  max-width:546px;
+  color:#FFF;
+  margin-bottom: 59px;
+}
+
+.search-form__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-form__field {
+  width:297px;
+  background: url(../img/svg/circle_icon.svg) no-repeat top 5px left;
+  border:0;
+  border-bottom: 3px solid #BFC0C5;
+  margin-right: 61px;
+  color: #fff;
+  padding-left: 43px;
+  padding-bottom:22px;
+  font-size:18px;
+  font-weight:500;
+}
+
+.search-form__field::placeholder {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.search-form__submit {
+  text-transform: uppercase;
+  background: #1B7DFF;
+  padding: 15px 39px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  border: 0;
+}
+
+.search-form__submit:hover, .search-form__submit:focus, .search-form__submit:active {
+  background: #215192;
+}
+/* main style end */
+
+.benefits__wrap {
+  max-width: 1262px;
+  background-color: #fff;
+  margin: 0 auto;
+  box-shadow: 0px 2px 20px 0px rgba(21, 24, 36, 0.16);
+  position:relative; 
+
+}
+
+.benefits__title {
+  width: 100%;
+  font-size:35px;
+  font-weight: 500;
+  line-height: 42px;
+  top: 0;
+  left: 0;
+  padding: 93px 100px 88px 100px;
+  transform: translateY(-100%);
+  background-color: #fff;
+  position:absolute; 
+}
+
+.benefits__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 55px;
+  padding: 0 100px;
+}
+
+
+.benefits__card-title{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+
+.benefits__card-text{
+  color: #000;
+  margin-bottom: 39px;
+}
+
+.benefits__card-thumd{
+  display: block;
+}
+
+.benefits__card-pic{
+  max-width: 68px;
+  height: 68px;
+  margin-bottom: 37px;
+}
+
+.benefits__card{
+  grid-column: span 1;
+  margin-bottom: 112px;
+}
+
+.benefits{
+  margin-bottom: 131px;
+}
+
+.benefits__card-link{
+  display: inline-block;
+  text-decoration: none;
+  color: #006DFE;
+  opacity: 0.75;
+  outline:none;
+  background: url(/img/svg/arrow.svg) no-repeat 95% center;
+  padding-right: 60px;
+  transition: .2s all;
+}
+
+
+.benefits__card-link:active, .benefits__card-link:hover, .benefits__card-link:focus{
+ background: url(/img/svg/arrow.svg) no-repeat right center;
+}
+
+.none {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header__burger{
+    display: block;
+  }
+  
+  .delite{
+    display: none;
+  }
+
+  .header__nav{
+    width: 100%;  
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 11;
+    padding: 75px;
+
+  }
+  .header__item{
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .header__list{
+    margin-left: 250px;
+  }
+
+  .header__item-link{
+    font-size: 28px;
+  }
+  
+  .header__item-link:last-child{
+    margin-bottom: 0;
+  }
+
+  .header__nav_close{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 11;
+  }
+
+  .header__nav_close_line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header__nav_close_line:first-child{
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .header__nav_close_line:last-child{
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+}
