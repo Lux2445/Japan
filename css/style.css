@@ -66,6 +66,22 @@ body {
   align-items: center;
 }
 
+.loader{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border-color: #000;
+  border: 3px solid rgba(50, 101, 168, 0.511);
+  border-left-color: #000000;
+  animation: loader 1.3s linear infinite;
+}
+
+@keyframes loader{
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .header {
     position:fixed;
     right: 0;

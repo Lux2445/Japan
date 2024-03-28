@@ -22,3 +22,10 @@
         menu.classList.remove('header__nav_active')
     })
 }) ();
+
+(function(){
+    const mask = document.querySelector('.mask')
+    window.addEventListener('load', () => {
+        mask.classList.add('')
+    })
+})();
