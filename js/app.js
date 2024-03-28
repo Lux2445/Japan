@@ -9,10 +9,16 @@
     }
 })();
 
-const close = document.querySelector('.header__nav_close').addEventListener('click', function () {
-    document.querySelector('.header__nav').classList.add('delite')
-})
+(function() {
+    const burger = document.querySelector('.header__burger')
+    const menu = document.querySelector('.header__nav')
+    const closeItem = document.querySelector('.header__nav_close')
 
-const active = document.querySelector('.header__burger').addEventListener('click', function () {
-    document.querySelector('.header__nav').classList.remove('delite')
-})
+    burger.addEventListener('click', ()  => {
+        menu.classList.add('header__nav_active')
+    });
+
+    closeItem.addEventListener('click', () => {
+        menu.classList.remove('header__nav_active')
+    })
+}) ();
